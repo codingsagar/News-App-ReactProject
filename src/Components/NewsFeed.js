@@ -44,7 +44,7 @@ const NewsFeed = ({category,country}) => {
   
   return (
       <>
-      <CategoryInfo country={country} category={category} />
+      <CategoryInfo country={country} category={category}/>
     <div className="newsfeed">
       {isLoading && <Loading/>}
       {!isLoading && articles.map((item,index) => (

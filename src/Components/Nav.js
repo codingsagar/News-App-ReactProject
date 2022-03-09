@@ -28,10 +28,12 @@ const Nav = ({ setCountry, country }) => {
         <nav>
           <div className="logo">
             <img src={logo} alt="" />
+            <NavLink to="/" style={{textDecoration:"none"}}>
             <h2>NEWSAPP</h2>
+            </NavLink>
           </div>
           <div className="navitems">
-            <ul onClick={()=>handleMenu()}>
+            <ul onClick={() => handleMenu()}>
               <li>
                 <NavLink
                   to="/"
@@ -118,7 +120,11 @@ const Nav = ({ setCountry, country }) => {
                   <option value="fr">FR</option>
                 </select>
               </li>
+              <NavLink to="about">
+                <li style={{paddingTop:"5px"}}>
               <img src={info_logo} alt="" />
+                </li>
+              </NavLink>
             </ul>
           </div>
         </nav>

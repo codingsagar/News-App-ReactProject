@@ -1,4 +1,5 @@
 import React from "react";
+import ReadMoreBtn from "./ReadMoreBtn";
 
 const NewsSection = ({ title, description, newsurl, datepublish }) => {
   const sourceRemover = (title) => {
@@ -19,11 +20,7 @@ const NewsSection = ({ title, description, newsurl, datepublish }) => {
         <div className="desc">
           <p>{description ? description.slice(0, 90) + "..." : description}</p>
         </div>
-        <div className="readmorebtn">
-          <button>
-            <a href={newsurl}>Read more</a>
-          </button>
-        </div>
+        <ReadMoreBtn newsurl={newsurl} />
         <div className="date">{datepublish}</div>
       </div>
     </>

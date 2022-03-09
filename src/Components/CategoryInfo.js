@@ -5,7 +5,7 @@ const CategoryInfo = ({country,category}) => {
     const flagUrl = findFlagUrlByIso2Code(country);
   return (
       <>
-    <h2 className="categoryinfo" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>{category.toUpperCase()} NEWS -{
+    <h2 className="categoryinfo" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>{category.toUpperCase()} NEWS - {
         <span style={{color:"#922a44",lineHeight:"25px"}}>
             &nbsp;
            <img src={flagUrl} alt="" style={{width:"45px",lineHeight:"20px"}}/>

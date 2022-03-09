@@ -1,5 +1,6 @@
 import NewsFeed from "./Components/NewsFeed";
 import Nav from "./Components/Nav";
+import About from "./Components/About";
 import NotFound from "./Components/NotFound";
 import {BrowserRouter as Router,Routes,
   Route} from "react-router-dom";
@@ -19,6 +20,7 @@ function App() {
         <Route path="entertainment" element={<NewsFeed category="entertainment" key="entertainment" country={country} />} />
         <Route path="science" element={<NewsFeed category="science" key="science"  country={country}  />} />
         <Route path="sports" element={<NewsFeed category="sports" key="sports"  country={country} />} />
+        <Route path="about" element={<About/>} />
         <Route path="*" element={<NotFound />} />
     </Routes>
       </Router>
