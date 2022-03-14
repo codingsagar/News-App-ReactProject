@@ -3,6 +3,7 @@ import NewsItem from "./NewsItem";
 import Loading from "./Loading";
 import top from "../Images/top.png";
 import CategoryInfo from "./CategoryInfo";
+import axios from "axios";
 
 
 const NewsFeed = ({category,country}) => {
@@ -22,13 +23,14 @@ const NewsFeed = ({category,country}) => {
       try {
         setIsLoading(true)
         const URL=`https://saurav.tech/NewsAPI/top-headlines/category/${category}/${country}.json`;
-        const Res= fetch(URL,{signal: ac.signal});
-        const response= await Res;
-        const json= await response.json();
-        setarticles(json.articles)
-        setIsLoading(false)
+        const response = await axios.get(URL,{signal: ac.signal});
+        const news = response.data.articles;
+        setarticles(news)
       } catch (error) {
         console.log(error);
+      }
+      finally{
+        setIsLoading(false) 
       }
   }
 
