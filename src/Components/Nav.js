@@ -10,7 +10,6 @@ const Nav = ({ setCountry, country }) => {
 
   const handleMenu = () => {
     let ul = document.querySelector("ul");
-    let img = document.querySelector(".menuimg");
     if (ismenuOpen === false) {
       ul.style.left = "0";
       setmenu(true);
