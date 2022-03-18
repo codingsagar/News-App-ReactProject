@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import logo from "../Images/news_logo.png";
 import info_logo from "../Images/info_logo.png";
 import { NavLink } from "react-router-dom";
+import Menu from "../Images/menu.png";
+import CancelImg from "../Images/cancel.png";
 
 const Nav = ({ setCountry, country }) => {
-  const [menu, setmenu] = useState(false);
+  const [ismenuOpen, setmenu] = useState(false);
 
   const handleMenu = () => {
     let ul = document.querySelector("ul");
-    if (menu === false) {
+    let img = document.querySelector(".menuimg");
+    if (ismenuOpen === false) {
       ul.style.left = "0";
       setmenu(true);
     } else {
@@ -21,9 +24,8 @@ const Nav = ({ setCountry, country }) => {
     <>
       <header>
         <div className="menu" onClick={() => handleMenu()}>
-          <div className="one"></div>
-          <div className="two"></div>
-          <div className="three"></div>
+          {!ismenuOpen && <img src={Menu} alt=""  className="menuimg"/>}
+          {ismenuOpen && <img src={CancelImg} alt=""  className="menuimg"/>}
         </div>
         <nav>
           <div className="logo">
