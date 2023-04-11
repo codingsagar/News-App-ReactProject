@@ -18,7 +18,7 @@ const NewsFeed = ({ category, country }) => {
     const fetchArticles = async () => {
       try {
         setIsLoading(true);
-        const URL = `https://gnews.io/api/v4/top-headlines?token=${process.env.GEONEWS_API_KEY}&topic=${category}&lang=en&country=${country}`;
+        const URL = `https://gnews.io/api/v4/top-headlines?token=${process.env.REACT_APP_GEONEWS_API_KEY}&topic=${category}&lang=en&country=${country}`;
         const response = await axios.get(URL, { signal: ac.signal });
         const news = response.data.articles;
         setarticles(news);
