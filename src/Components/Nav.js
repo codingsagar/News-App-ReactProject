@@ -115,10 +115,10 @@ const Nav = ({ setCountry, country }) => {
                 >
                   <option value="in">IN</option>
                   <option value="us">US</option>
-                  <option value="au">AU</option>
-                  <option value="ru">RU</option>
-                  <option value="gb">UK</option>
-                  <option value="fr">FR</option>
+                  <option value="au">AUS</option>
+                  <option value="pk">PAK</option>
+                  <option value="gbr">UK</option>
+                  <option value="ca">CA</option>
                 </select>
               </li>
               <NavLink to="about">
